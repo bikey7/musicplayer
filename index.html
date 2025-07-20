@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KingStream Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- App Title -->
+    <h1 class="app-title">KingStream</h1>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Music Player -->
+      <div class="music-player">
+        <!-- Hidden Audio Element -->
+        <audio id="audio"></audio>
+
+        <!-- Song Info -->
+        <div class="song-info">
+          <h2 id="song-title">Dusman</h2>
+          <p id="song-artist">Artist 1</p>
+        </div>
+
+        <!-- Album Art Container -->
+        <div class="album-container">
+          <div class="album-art-wrapper">
+            <img
+              id="album-art"
+              src="image/Dusman.jpg"
+              alt="Album Art"
+              class="album-art"
+            />
+            <div class="album-overlay"></div>
+            <div class="center-dot"></div>
+          </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+          <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="time-info">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <button class="control-btn" id="prev-btn">
+            <i class="fas fa-step-backward"></i>
+          </button>
+
+          <button class="control-btn play-btn" id="play-btn">
+            <i class="fas fa-play"></i>
+          </button>
+
+          <button class="control-btn" id="next-btn">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Playlist Sidebar -->
+      <div class="playlist-sidebar">
+        <div class="playlist-header">
+          <i class="fas fa-volume-up"></i>
+          <h3>Playlist</h3>
+        </div>
+
+        <div class="playlist-songs" id="playlist-songs">
+          <!-- Songs will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
